@@ -32,14 +32,23 @@ El proyecto está organizado en una estructura modular para facilitar su manteni
 
 mi_manejador_tareas/
 ├── src/
+
 │   ├── __init__.py         # Indica que 'src' es un paquete Python
+
 │   ├── task.py             # Clase para representar una Tarea (modelo de datos)
+
 │   └── task_manager.py     # Lógica central para interactuar con el archivo Excel (CRUD)
+
 ├── tests/
+
 │   ├── __init__.py         # Indica que 'tests' es un paquete Python
+
 │   └── test_task_manager.py # Pruebas unitarias y de integración para la lógica de TaskManager
+
 ├── main.py                 # Punto de entrada principal de la aplicación GUI (PyQt6)
+
 └── README.md               # Este archivo de documentación
+
 Requisitos e Instalación
 Para ejecutar este programa, necesitarás Python 3.x y las siguientes librerías:
 
