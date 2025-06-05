@@ -10,9 +10,12 @@ Asignatura: Auditoría Informática T4-M3
 
 Desarrollado por: 
 
-Sharvell Joan Gonzalez Delgado C.I.V-12.631.144 
+Sharvell Joan Gonzalez Delgado C.I.V-12.631.144
+
 Isidoro Alexander Cárdenas Duque C.I.V-10.171.055
+
 Javier Alexander, Avendaño Diaz C.I.V-12.491.119
+
 José Omar Contreras Cárdenas C.I.V- 9.334.803
 
 
