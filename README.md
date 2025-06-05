@@ -7,7 +7,14 @@ persiste todos los datos en un archivo de Excel (.xlsx), asegurando que tu infor
 Información del Proyecto
 Institución: UPTNT "Manuela Sáenz"
 Asignatura: Auditoría Informática T4-M3
-Desarrollado por: Sharvell Gonzalez
+
+Desarrollado por: 
+
+Sharvell Joan Gonzalez Delgado C.I.V-12.631.144 
+Isidoro Alexander Cárdenas Duque C.I.V-10.171.055
+Javier Alexander, Avendaño Diaz C.I.V-12.491.119
+José Omar Contreras Cárdenas C.I.V- 9.334.803
+
 
 Funcionalidades del Programa
 El Manejador de Tareas ofrece las siguientes capacidades clave:
