@@ -21,57 +21,45 @@ José Omar Contreras Cárdenas C.I.V- 9.334.803
 
 Funcionalidades del Programa
 El Manejador de Tareas ofrece las siguientes capacidades clave:
-
-Creación de Tareas: Añade nuevas tareas con una descripción, una fecha de vencimiento y un nivel de prioridad (Baja, Media, Alta).
-Visualización de Tareas: Muestra todas las tareas existentes en una tabla clara e interactiva dentro de la interfaz.
-Actualización de Tareas: Modifica cualquier detalle de una tarea ya existente, incluyendo su descripción, fecha de vencimiento, prioridad, y especialmente su estado (Pendiente, En Desarrollo, Completada).
-Eliminación de Tareas: Permite borrar tareas que ya no son necesarias.
-Persistencia de Datos: Todas las tareas son automáticamente guardadas en un archivo de Excel (tasks.xlsx) y cargadas cada vez que se inicia la aplicación, garantizando que tu progreso siempre esté disponible.
+•	Creación de Tareas: Añade nuevas tareas con una descripción, una fecha de vencimiento y un nivel de prioridad (Baja, Media, Alta).
+•	Visualización de Tareas: Muestra todas las tareas existentes en una tabla clara e interactiva dentro de la interfaz.
+•	Actualización de Tareas: Modifica cualquier detalle de una tarea ya existente, incluyendo su descripción, fecha de vencimiento, prioridad, y especialmente su estado (Pendiente, En Desarrollo, Completada).
+•	Eliminación de Tareas: Permite borrar tareas que ya no son necesarias.
+•	Persistencia de Datos: Todas las tareas son automáticamente guardadas en un archivo de Excel (tasks.xlsx) y cargadas cada vez que se inicia la aplicación, garantizando que tu progreso siempre esté disponible.
+________________________________________
 Estructura del Proyecto
 El proyecto está organizado en una estructura modular para facilitar su mantenimiento y escalabilidad:
-
 mi_manejador_tareas/
 ├── src/
-
 │   ├── __init__.py         # Indica que 'src' es un paquete Python
-
 │   ├── task.py             # Clase para representar una Tarea (modelo de datos)
-
 │   └── task_manager.py     # Lógica central para interactuar con el archivo Excel (CRUD)
-
 ├── tests/
-
 │   ├── __init__.py         # Indica que 'tests' es un paquete Python
-
 │   └── test_task_manager.py # Pruebas unitarias y de integración para la lógica de TaskManager
-
 ├── main.py                 # Punto de entrada principal de la aplicación GUI (PyQt6)
-
 └── README.md               # Este archivo de documentación
-
+________________________________________
 Requisitos e Instalación
 Para ejecutar este programa, necesitarás Python 3.x y las siguientes librerías:
-
 Bash
-
 pip install PyQt6 openpyxl pytest
+________________________________________
 Cómo Ejecutar la Aplicación
-Asegúrate de tener todas las dependencias instaladas (ver sección anterior).
-Navega a la carpeta raíz del proyecto (mi_manejador_tareas/) en tu terminal o línea de comandos.
-Ejecuta el archivo principal:
+1.	Asegúrate de tener todas las dependencias instaladas (ver sección anterior).
+2.	Navega a la carpeta raíz del proyecto (mi_manejador_tareas/) en tu terminal o línea de comandos.
+3.	Ejecuta el archivo principal: 
 Bash
-
 python main.py
 La aplicación se iniciará y cargará automáticamente las tareas guardadas en tasks.xlsx (o creará uno nuevo si no existe).
+________________________________________
 Planificación y Ejecución de Pruebas
 Se han implementado 10 pruebas robustas utilizando el framework pytest para auditar y verificar el correcto funcionamiento de la lógica de negocio, especialmente la interacción con el archivo de Excel. Estas pruebas se encuentran en el archivo tests/test_task_manager.py.
-
 Cómo Ejecutar las Pruebas
-Asegúrate de haber instalado las dependencias, incluyendo pytest.
-Navega a la carpeta raíz del proyecto (mi_manejador_tareas/) en tu terminal.
-Ejecuta pytest de la siguiente manera para que reconozca los módulos y ejecute todas las pruebas:
+1.	Asegúrate de haber instalado las dependencias, incluyendo pytest.
+2.	Navega a la carpeta raíz del proyecto (mi_manejador_tareas/) en tu terminal.
+3.	Ejecuta pytest de la siguiente manera para que reconozca los módulos y ejecute todas las pruebas: 
 Bash
-
 python -m pytest tests/
 Deberías ver un resultado que indique que todas las pruebas pasaron exitosamente.
 Detalles de las 10 Pruebas Realizadas
@@ -86,18 +74,6 @@ Detalles de las 10 Pruebas Realizadas
 8	test_delete_non_existent_task	Robustez de Eliminación (Casos Borde)	Intenta eliminar una tarea con un ID que no existe.	La función delete_task retorna False y no altera ninguna tarea existente.	Unitaria (Borde)
 9	test_handle_empty_excel_file	Manejo de Archivos Corruptos/Vacíos	Inicializa TaskManager con un archivo Excel vacío o con encabezados incorrectos.	El manager reinicializa la hoja de Excel con los encabezados correctos y sin datos inválidos.	Integración (Robustez)
 10	test_data_persistence_on_close_reopen	Persistencia de Datos y Ciclo de Vida del Manager	Agrega tareas, cierra el TaskManager, y luego lo reabre.	Las tareas agregadas previamente se cargan correctamente al reabrir el manager.	Integración (Sistema)
-
 Exportar a Hojas de cálculo
-Video Demostrativo
-ENLACE A TU VIDEO AQUÍ
 
-El video mostrará:
 
-Una breve introducción al proyecto y sus funcionalidades clave.
-Un recorrido por la estructura de archivos y los módulos principales.
-La ejecución de las pruebas (python -m pytest tests/) demostrando que todas pasan.
-Una demostración en vivo de la interfaz gráfica (GUI), incluyendo:
-Agregar nuevas tareas.
-Actualizar tareas, prestando especial atención al cambio de estado (Pendiente, En Desarrollo, Completada).
-Eliminar tareas.
-Verificar la persistencia de datos al cerrar y reabrir la aplicación, mostrando que las tareas y sus estados se cargan correctamente.
